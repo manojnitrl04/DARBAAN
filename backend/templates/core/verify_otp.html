@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Verify OTP</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <p>Enter the OTP sent to {{ request.session.user_email }}:</p>
+    
+    <p>Enter the OTP sent to {{ request.session.user_mobile_number }}:</p>
+
+    <input type="text" name="user_otp">
+    <button type="submit">Verify OTP</button>
+    <input type="text" name="user_otp">
+    <button type="submit">Verify OTP</button>
+  </form>
+{% endblock %}

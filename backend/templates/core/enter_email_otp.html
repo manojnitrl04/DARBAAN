@@ -1,0 +1,9 @@
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    <label for="email_otp">Enter the OTP sent to your email:</label>
+    <input type="text" id="email_otp" name="email_otp" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

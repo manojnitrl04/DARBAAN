@@ -1,0 +1,9 @@
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    <label for="mobile_otp">Enter the OTP sent to your mobile:</label>
+    <input type="text" id="mobile_otp" name="mobile_otp" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

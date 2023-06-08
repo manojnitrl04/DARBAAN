@@ -1,0 +1,9 @@
+{% block content %}
+  <form method="POST">
+    {% csrf_token %}
+    <label for="user_mobile_number">Enter your mobile number:</label>
+    <input type="tel" id="user_mobile_number" name="user_mobile_number" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}
